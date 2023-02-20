@@ -1,9 +1,7 @@
 "use client";
 import {
   Box,
-  Flex,
   Stack,
-  Image,
   Text,
   Heading,
   Link,
@@ -16,39 +14,23 @@ import {
   Grid,
 } from "@chakra-ui/react";
 import NextLink from "next/link";
-import {
-  FaFacebook,
-  FaInstagram,
-  FaTwitter,
-  FaLinkedin,
-  FaGithub,
-  FaYoutube,
-  FaDiscord,
-  FaRegCopyright,
-} from "react-icons/fa";
+import { FaRegCopyright } from "react-icons/fa";
 import LogoP from "@/utils/LogoP";
 import { NAV_ITEMS } from "@/utils/constants";
 import SocialIcons from "@/utils/SocialIcons";
+import SectionWrapper from "./SectionWrapper";
 
 export default function Footer() {
   const xPadding = useBreakpointValue({ base: 4, md: 8, lg: 24 });
   return (
-    <Box bg={"black"} color={"white"} maxW={"full"}>
-      <Stack justifyContent={"center"} alignItems={"center"}>
-        <Divider
-          borderColor={"white"}
-          orientation="horizontal"
-          w={"75%"}
-          mb={4}
-        />
+    <SectionWrapper>
+      <Stack pt={20}>
+        <Divider />
         <Stack
           direction={{ base: "column", sm: "row" }}
-          px={xPadding}
           py={8}
-          alignItems={"center"}
-          w="full"
+          alignItems={"flex-start"}
           justifyContent={"space-between"}
-          spacing={4}
           divider={<StackDivider borderColor="gray.200" />}
         >
           <Stack w={"350px"} spacing={4}>
@@ -90,7 +72,7 @@ export default function Footer() {
           </Stack>
         </Stack>
 
-        <Divider borderColor={"white"} orientation="horizontal" w={"75%"} />
+        <Divider />
 
         <Stack
           direction={"row"}
@@ -101,9 +83,11 @@ export default function Footer() {
         >
           <Text>2023</Text>
           <Icon as={FaRegCopyright} />
-          <Text>Panaverse Dao</Text>
+          <Link as={NextLink} href={"https://www.panaverse.co/"} isExternal>
+            <Text>Panaverse Dao</Text>
+          </Link>
         </Stack>
       </Stack>
-    </Box>
+    </SectionWrapper>
   );
 }

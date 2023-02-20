@@ -12,12 +12,6 @@ import {
 import { FaTwitter, FaFacebook, FaLinkedin } from "react-icons/fa";
 import NextLink from "next/link";
 import { TrainerType } from "@/types/TrainerType";
-import {
-  Heading1Size,
-  Heading2Size,
-  TextBasicSize,
-  xPadding,
-} from "@/utils/Sizing";
 
 export default function TrainerCard({
   imageUrl,
@@ -31,7 +25,6 @@ export default function TrainerCard({
     <Stack
       maxW={{ base: "xs", md: "sm", lg: "md" }}
       h={{ base: "xs", md: "xs", lg: "sm" }}
-      // boxSize={"xs"}
       borderWidth="1px"
       borderRadius="lg"
       borderColor={"red"}
@@ -51,7 +44,7 @@ export default function TrainerCard({
             position="absolute"
             w="100%"
             h="100%"
-            bg="rgba(255, 0, 0, 0.15)"
+            bg="rgba(255, 0, 0, 0.25)"
             borderRadius="full"
           />
           <Image
@@ -67,7 +60,7 @@ export default function TrainerCard({
 
       <Box p="6">
         <Box display="flex" alignItems="baseline">
-          <Text fontSize={TextBasicSize} fontWeight="semibold" mr="2">
+          <Text fontSize={"xl"} fontWeight="semibold" mr="2">
             {name}
           </Text>
         </Box>
@@ -76,9 +69,9 @@ export default function TrainerCard({
           mt="2"
           fontSize={{
             base: "md",
-            sm: "lg",
-            md: "lg",
-            lg: "xl",
+            sm: "md",
+            md: "md",
+            lg: "lg",
           }}
           color="gray.500"
         >

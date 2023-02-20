@@ -1,21 +1,29 @@
 "use client";
-import { Box, Flex, Link, Button, useBreakpointValue } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Link,
+  Button,
+  useBreakpointValue,
+  Stack,
+} from "@chakra-ui/react";
 import NextLink from "next/link";
 import DesktopNav from "./DesktopNav";
 import MobileNav from "./MobileNav";
 import LogoP from "@/utils/LogoP";
+import SectionWrapper from "@/components/SectionWrapper";
 
 export default function Header() {
   const xPadding = useBreakpointValue({ base: 4, md: 8, lg: 24 });
 
   return (
-    <Flex bg={"black"} color={"white"} maxW={"full"}>
-      <Flex
-        px={xPadding}
+    <SectionWrapper>
+      {/* <Flex bg={"black"} color={"white"} maxW={"full"}> */}
+      <Stack
+        direction={"row"}
         py={8}
         justify={"space-between"}
         alignItems={"center"}
-        w="full"
       >
         <LogoP />
 
@@ -35,7 +43,7 @@ export default function Header() {
         </Box>
 
         <MobileNav />
-      </Flex>
-    </Flex>
+      </Stack>
+    </SectionWrapper>
   );
 }

@@ -62,9 +62,11 @@ export default function Footer() {
 
             <Link as={NextLink} href={"/apply"}>
               <Button
-                colorScheme={"whiteAlpha"}
+                colorScheme={"white"}
                 variant={"outline"}
-                size={"sm"}
+                size={"md"}
+                rounded={"full"}
+                px={8}
               >
                 Apply Now
               </Button>

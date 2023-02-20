@@ -16,7 +16,7 @@ import {
 } from "@chakra-ui/react";
 import Image from "next/image";
 import NextLink from "next/link";
-import Enrollment from "../../../../../public/enrollSpecial.png";
+import Enrollment from "../../../../public/enrollSpecial.png";
 import { ACCORD_ITEMS } from "@/utils/Accordion";
 import SectionWrapper from "@/components/SectionWrapper";
 
@@ -84,7 +84,7 @@ export default function EnrollCoursesX() {
         </SimpleGrid>
 
         <Link as={NextLink} href="/curriculm">
-          <Button px={8} rounded={"3xl"} colorScheme={"red"}>
+          <Button px={14} rounded={"full"} colorScheme={"red"} size={"lg"}>
             Explore Full Curriculum
           </Button>
         </Link>

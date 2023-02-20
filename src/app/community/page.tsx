@@ -1,5 +1,5 @@
-import React from "react";
+import FullScreen from "@/components/FullScreen";
 
 export default function page() {
-  return <div>page</div>;
+  return <FullScreen>Community Page</FullScreen>;
 }

@@ -1,5 +1,5 @@
 "use client";
-import { Box, Text, Stack, Circle, Heading } from "@chakra-ui/react";
+import { Box, Text, Stack } from "@chakra-ui/react";
 
 export default function FBox({
   name,
@@ -11,9 +11,10 @@ export default function FBox({
   return (
     <Stack
       maxW="sm"
-      borderWidth="1px"
-      borderRadius="lg"
+      borderWidth="2px"
+      borderRadius="3xl"
       borderColor={"red"}
+      bg="rgba(255, 255, 255, 0.1)"
       overflow="hidden"
       alignItems={"center"}
       justifyContent={"center"}

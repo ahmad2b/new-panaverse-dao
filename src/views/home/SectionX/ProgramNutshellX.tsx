@@ -41,20 +41,21 @@ export default function ProgramNutshellX() {
               <Text fontSize={"lg"}>
                 In this brand-new type of curriculum, students will learn how to
                 make money and boost exports in the classroom and will begin
-                doing so within six months of the program's beginning. It
+                doing so within six months of the program beginning. It
                 resembles a cross between a corporate venture and an educational
                 project.
               </Text>
-              <Link>
+              <Link as={NextLink} href={"/apply"}>
                 <Button
                   colorScheme={"red"}
-                  textColor={"white"}
+                  // textColor={"white"}
                   border={"2px"}
+                  // bgColor="rgba (255, 255, 255, 0.1)"
                   borderColor={"red"}
                   variant={"outline"}
                   size={"lg"}
                   px={20}
-                  rounded={"3xl"}
+                  rounded={"full"}
                 >
                   Apply Now
                 </Button>

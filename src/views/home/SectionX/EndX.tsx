@@ -19,7 +19,7 @@ export default function EndX() {
     <SectionWrapper>
       <Stack
         border={"8px"}
-        borderColor={"red.900"}
+        borderColor={"red.800"}
         borderRadius={"3xl"}
         direction={"column"}
         py={{ base: 14, md: 14 }}
@@ -27,6 +27,7 @@ export default function EndX() {
         alignItems={"center"}
         justifyContent={"space-between"}
         spacing={{ base: 8, md: 14 }}
+        bg="rgba(255, 255, 255, 0.1)"
       >
         <SimpleGrid
           columns={{ base: 1, md: 3 }}
@@ -91,11 +92,11 @@ export default function EndX() {
           <Link as={NextLink} href={"/apply"}>
             <Button
               px={8}
-              variant={"outline"}
               borderColor={"red"}
               textColor={"white"}
               borderRadius={"3xl"}
               colorScheme={"red"}
+              variant={"outline"}
             >
               Start Learning Today
             </Button>
